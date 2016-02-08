@@ -1,3 +1,16 @@
 body {
     text-align: center;
 }
+
+li {
+    list-style-type: none;
+}
+
+img {
+    height: 222.5px;
+    width: 150px;
+}
+
+.prod-data-display {
+    margin-top: 20px;
+}
