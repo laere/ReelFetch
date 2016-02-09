@@ -24,12 +24,13 @@ module.exports = React.createClass({
         fetch('http://www.omdbapi.com/?t=' + query + '&r=json')
             .then(function(response) {
                 if (response.status !== 200) {
-                    console.log(response.status);
+                    alert(response.status);
                     return;
                 } 
                 return response.json()
             })
             .then(function(data) {
+                // Add error handler if inquiry !movie || !series
                 if (data.Error) {
                     alert("No results found for: " + inquiry);
                     self.setState({
@@ -37,8 +38,8 @@ module.exports = React.createClass({
                     });
                     return;
                 }
+                console.log(data);
                 apiData.push(data);
-                console.log(apiData);
                 self.setState({
                     inquiry: '',
                     sData: apiData

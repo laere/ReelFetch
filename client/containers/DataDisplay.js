@@ -5,6 +5,7 @@ module.exports = React.createClass({
         return (<div className="prod-data-display">
             { this.props.sData.map(x => <div className="prod-item">
                 <img src={ x.Poster }/>
+                <p>{ x.Title }</p>
                 <p>{ x.Plot }</p>
                 <ul>
                     <li>Actors: { x.Actors }</li>
