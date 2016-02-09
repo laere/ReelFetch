@@ -52,7 +52,6 @@ module.exports = React.createClass({
     formatInquiry: function(input) {
         return input.split(' ').join('+');
     },
-
     render: function() {
         return (
           <div>
