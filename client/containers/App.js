@@ -53,12 +53,29 @@ module.exports = React.createClass({
     formatInquiry: function(input) {
         return input.split(' ').join('+');
     },
+    //Make this return a specific amount of posters.
+    filterMovies: function() {
+      //initialize array
+      var moviePosters = [];
+      //return 5 posters
+      for (var i; i <= 5; i++) {
+        //if movie rating > 8
+        if(this.state.sData.rating >= 8) {
+          //return poster of movie and push into array
+          return moviePosters.push(this.state.sData.Poster[i]);
+          //else do nothing
+        }
+      }
+    },
     render: function() {
+
+      var topMovies = this.state.sData.filter(filterMovies);
         return (
           <div>
             <form onSubmit={ this.handleSubmit }>
                 <input type="text" value={ this.state.inquiry } onChange={ this.handleChange } />
             </form>
+            {topMovies}
             <DataDisplay sData={ this.state.sData } />
             <SceneOptionPanel />
         </div>
