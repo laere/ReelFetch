@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import DataDisplay from './DataDisplay'
 import SceneOptionPanel from './SceneOptionPanel'
+import Routes from './Routes.js'
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -58,7 +59,7 @@ module.exports = React.createClass({
             <form onSubmit={ this.handleSubmit }>
                 <input type="text" value={ this.state.inquiry } onChange={ this.handleChange } />
             </form>
-            <DataDisplay sData={ this.state.sData } hover={this.hoverToggle}/>
+            <DataDisplay sData={ this.state.sData } />
             <SceneOptionPanel />
         </div>
       )
