@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import DataDisplay from './DataDisplay'
 import SceneOptionPanel from './SceneOptionPanel'
-import Routes from './Routes.js'
+
 
 module.exports = React.createClass({
     getInitialState: function() {
