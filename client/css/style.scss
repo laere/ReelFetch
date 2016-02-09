@@ -1,0 +1,58 @@
+/*Can split css into diff files if needed */
+
+
+/////IMPORTS////////////////////////////////
+
+@import 'bourbon/bourbon';
+@import '_normalize';
+
+
+
+/////VARS/MIXINS////////////////////////////////
+
+
+
+/////BASE STYLES////////////////////////////////
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5% // 1rem = 10px //
+}
+
+*,*:after,*:before {
+  box-sizing: border-box;
+}
+
+body {
+
+}
+
+
+
+/////MAIN STYLES////////////////////////////////
+#root {
+
+  .prod-data-display {
+
+    .poster-overlay {
+      background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-128.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 300px;
+      .poster:hover {
+        animation: slow 0.2s;
+        animation-fill-mode: forwards;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes slow {
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: .5;
+  }
+}

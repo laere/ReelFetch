@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 
 module.exports = React.createClass({
+
     render: function() {
-        return (<div className="prod-data-display">
+
+        return (
+          <div className="prod-data-display">
             { this.props.sData.map(x => <div className="prod-item">
-                <img src={ x.Poster }/>
+              <div className="poster-overlay">
+                <img className="poster" src={ x.Poster } />
+              </div>
                 <p>{ x.Title }</p>
                 <p>{ x.Plot }</p>
                 <ul>
@@ -13,7 +18,9 @@ module.exports = React.createClass({
                     <li>IMDB Rating: { x.imdbRating }</li>
                     <li>IMDB Votes: { x.imdbVotes }</li>
                 </ul>
-            </div>) }
-        </div>)
+            </div>
+          )}
+        </div>
+      )
     }
 });

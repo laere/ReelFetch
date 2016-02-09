@@ -26,7 +26,7 @@ module.exports = React.createClass({
                 if (response.status !== 200) {
                     alert(response.status);
                     return;
-                } 
+                }
                 return response.json()
             })
             .then(function(data) {
@@ -52,13 +52,16 @@ module.exports = React.createClass({
     formatInquiry: function(input) {
         return input.split(' ').join('+');
     },
+
     render: function() {
-        return (<div>
+        return (
+          <div>
             <form onSubmit={ this.handleSubmit }>
                 <input type="text" value={ this.state.inquiry } onChange={ this.handleChange } />
             </form>
-            <DataDisplay sData={ this.state.sData } />
+            <DataDisplay sData={ this.state.sData } hover={this.hoverToggle}/>
             <SceneOptionPanel />
-        </div>)
+        </div>
+      )
     }
 });
